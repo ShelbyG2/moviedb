@@ -1,12 +1,71 @@
-# React + Vite
+# TMDB Movie Database
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a movie database application built with React and Vite. It uses the TMDB (The Movie Database) API to fetch and display information about movies, including trailers.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search for movies by title
+- Display trending movies
+- View movie details including title, overview, rating, and language
+- Play movie trailers using YouTube
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- TMDB API
+- Appwrite for database and authentication
+- ReactPlayer for playing trailers
+- Tailwind CSS for styling
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed
+- TMDB API key
+- Appwrite project setup
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/tmdb-movie-database.git
+   cd tmdb-movie-database
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env.local` file in the root directory and add your TMDB API key and Appwrite project details:
+
+   ```env
+   VITE_TMDB_API_KEY=your_tmdb_api_key
+   VITE_APPWRITE_PROJECT_ID=your_appwrite_project_id
+   VITE_APPWRITE_DATABASE_ID=your_appwrite_database_id
+   VITE_APPWRITE_COLLECTION_ID=your_appwrite_collection_id
+   ```
+
+### Running the Application
+
+To start the development server, run:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:3000`.
+
+### Project Structure
+
+- `src/components`: Contains React components such as `MovieCard`, `MoviePlayer`, `Spinner`, and `Search`.
+- `src/appwrite.jsx`: Contains functions for interacting with the Appwrite database.
+- `src/App.jsx`: Main application component.
+
+### License
+
+This project is licensed under the MIT License.
